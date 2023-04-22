@@ -1,0 +1,100 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    background-color: black;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header h1{
+    color: #be0ece;
+    font-size: 2.5rem;
+}
+
+header span{
+    color: white;
+}
+
+.section-div{
+    animation: initialize .17s forwards;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    padding: 60px;
+}
+
+.section-div div{
+    margin-top: 120px;
+    align-self: start;
+    display: grid;
+    gap: 30px;
+}
+
+.section-div div h2{
+    font-weight: 300;
+    color: #f7f7f7;
+}
+
+.section-div div p{
+    font-weight: 100;
+    color: #f7f7f7;
+}
+
+.section-div div a{
+    justify-self: start;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.typing::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink .8s infinite;
+}
+
+.section-div img{
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+@keyframes blink{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes initialize{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
